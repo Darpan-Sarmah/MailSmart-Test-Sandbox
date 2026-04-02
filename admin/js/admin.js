@@ -54,6 +54,14 @@
         formData.push({ name: 'action', value: 'mailsmart_trials_save_settings' });
         formData.push({ name: 'nonce', value: config.nonce });
 
+        // Include sandbox/demo checkboxes that live outside this form.
+        if ($('#sandbox-enabled').is(':checked')) {
+            formData.push({ name: 'sandbox_enabled', value: '1' });
+        }
+        if ($('#demo-enabled').is(':checked')) {
+            formData.push({ name: 'demo_enabled', value: '1' });
+        }
+
         $.post(config.ajaxUrl, formData, function (response) {
             if (response.success) {
                 showNotice(config.i18n.saved);
