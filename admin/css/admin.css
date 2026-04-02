@@ -1,0 +1,135 @@
+/**
+ * SG MailSmart Trials Engine – Admin Styles
+ */
+
+.mailsmart-trials-wrap {
+    max-width: 1200px;
+}
+
+.mailsmart-trials-wrap h1 {
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0 0 15px;
+    padding: 9px 0 4px;
+}
+
+/* Tabs */
+.mailsmart-trials-tabs {
+    margin-bottom: 20px;
+}
+
+.mailsmart-trials-tabs .nav-tab {
+    cursor: pointer;
+}
+
+/* Tab Content */
+.mailsmart-trials-tab-content {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-top: none;
+    padding: 20px;
+}
+
+/* Notice */
+.mailsmart-trials-notice {
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-left: 4px solid #00a32a;
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.mailsmart-trials-notice.error {
+    border-left-color: #d63638;
+}
+
+/* Timer */
+.mailsmart-timer {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: monospace;
+    color: #1d2327;
+    padding: 10px 0;
+}
+
+/* Dashboard Table */
+#trials-dashboard-table {
+    margin-top: 10px;
+}
+
+#trials-dashboard-table .badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#trials-dashboard-table .badge-trial {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+#trials-dashboard-table .badge-sandbox {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+#trials-dashboard-table .badge-demo {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+#trials-dashboard-table .badge-active {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+#trials-dashboard-table .badge-paused {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* Usage bar */
+.usage-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+
+.usage-bar-track {
+    flex: 1;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.usage-bar-fill {
+    height: 100%;
+    background: #3b82f6;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.usage-bar-fill.warning {
+    background: #f59e0b;
+}
+
+.usage-bar-fill.danger {
+    background: #ef4444;
+}
+
+/* Responsive */
+@media screen and (max-width: 782px) {
+    .mailsmart-trials-wrap {
+        max-width: 100%;
+    }
+    
+    .mailsmart-timer {
+        font-size: 24px;
+    }
+}
