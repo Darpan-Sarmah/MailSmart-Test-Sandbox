@@ -242,7 +242,7 @@ final class SG_MailSmart_Trials_Admin {
                         <th scope="row"><?php esc_html_e( 'Enable Sandbox', 'sg-mailsmart-trials' ); ?></th>
                         <td>
                             <label>
-                                <input type="checkbox" id="sandbox-enabled" <?php checked( ! empty( $settings['sandbox_enabled'] ) ); ?> />
+                                <input type="checkbox" id="sandbox-enabled" name="sandbox_enabled" value="1" <?php checked( ! empty( $settings['sandbox_enabled'] ) ); ?> />
                                 <?php esc_html_e( 'Allow sandbox mode for internal testing', 'sg-mailsmart-trials' ); ?>
                             </label>
                         </td>
@@ -279,7 +279,7 @@ final class SG_MailSmart_Trials_Admin {
                         <th scope="row"><?php esc_html_e( 'Enable Demo', 'sg-mailsmart-trials' ); ?></th>
                         <td>
                             <label>
-                                <input type="checkbox" id="demo-enabled" <?php checked( ! empty( $settings['demo_enabled'] ) ); ?> />
+                                <input type="checkbox" id="demo-enabled" name="demo_enabled" value="1" <?php checked( ! empty( $settings['demo_enabled'] ) ); ?> />
                                 <?php esc_html_e( 'Enable demo mode for showcasing', 'sg-mailsmart-trials' ); ?>
                             </label>
                         </td>
