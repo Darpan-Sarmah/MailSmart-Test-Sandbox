@@ -99,6 +99,7 @@ final class SG_MailSmart_Trials_Admin {
                 'demoLoaded'    => __( 'Demo data loaded.', 'sg-mailsmart-trials' ),
                 'confirmStop'   => __( 'Are you sure you want to stop this trial?', 'sg-mailsmart-trials' ),
                 'error'         => __( 'An error occurred.', 'sg-mailsmart-trials' ),
+                'noTrials'      => __( 'No active trials.', 'sg-mailsmart-trials' ),
             ),
         ) );
     }

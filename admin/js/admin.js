@@ -87,7 +87,7 @@
     $('#sandbox-start').on('click', function () {
         var userId = $('#sandbox-user-select').val();
         if (!userId) {
-            showNotice('Please select a user.', true);
+            showNotice(config.i18n.error, true);
             return;
         }
 
@@ -112,7 +112,7 @@
     $('#sandbox-stop').on('click', function () {
         var userId = $('#sandbox-user-select').val();
         if (!userId) {
-            showNotice('Please select a user.', true);
+            showNotice(config.i18n.error, true);
             return;
         }
 
@@ -156,7 +156,7 @@
     $('#demo-start').on('click', function () {
         var userId = $('#demo-user-select').val();
         if (!userId) {
-            showNotice('Please select a user.', true);
+            showNotice(config.i18n.error, true);
             return;
         }
 
@@ -241,7 +241,7 @@
         $body.empty();
 
         if (!trials || trials.length === 0) {
-            $body.append('<tr class="no-items"><td colspan="7">No active trials.</td></tr>');
+            $body.append('<tr class="no-items"><td colspan="7">' + escHtml(config.i18n.noTrials || 'No active trials.') + '</td></tr>');
             return;
         }
 

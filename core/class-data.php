@@ -165,10 +165,10 @@ final class SG_MailSmart_Trials_Data {
      */
     private static function get_client_ip(): string {
         $ip = '';
-        if ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
+        if ( isset( $_SERVER['HTTP_X_FORWARDED_FOR'] ) && '' !== $_SERVER['HTTP_X_FORWARDED_FOR'] ) {
             $parts = explode( ',', sanitize_text_field( wp_unslash( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) );
             $ip    = trim( $parts[0] );
-        } elseif ( ! empty( $_SERVER['REMOTE_ADDR'] ) ) {
+        } elseif ( isset( $_SERVER['REMOTE_ADDR'] ) && '' !== $_SERVER['REMOTE_ADDR'] ) {
             $ip = sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) );
         }
         return $ip;
